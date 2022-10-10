@@ -5,6 +5,8 @@ class StatesController < ApplicationController
   end
 
   def show
-    @state = State.find_by(:state)
+    @state_id = params["abbrev"]
+    @state = State.find_by(id: @state_id)
+    render template: "states/show"
   end
 end
