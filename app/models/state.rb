@@ -1,5 +1,5 @@
 class State < ApplicationRecord
-
+has_many :abbreviations, :through => :datum
   # def all_states
   #   puts State.all
   # end
