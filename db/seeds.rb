@@ -8,12 +8,12 @@ CSV.foreach(Rails.root.join("lib/tasks/seed_csv/state_data.csv") headers: true) 
     share_population_in_metro_areas: row["share_population_in_metro_areas"],
     share_population_with_high_school_degree: row["share_population_with_high_school_degree"],
   })
-end
+  end
 
-CSV.foreach(Rails.root.join("lib/tasks/seed_csv/abbreviations.csv"), headers: true) do |row|
+CSV.foreach(Rails.root.join("lib/tasks/seed_csv/abbreviations.csv") headers: true) do |row|
   Abbreviation.create({
     state: row["State"],
     abbrev: row["Abbrev"],
     code: row["Code"],
   })
-end
+  end
