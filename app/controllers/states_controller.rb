@@ -5,7 +5,7 @@ class StatesController < ApplicationController
   end
 
   def show
-    @state = State.find_by(id: params[:code])
+    @state = State.find_by(code: params[:code])
     render json: @state
   end
 end
