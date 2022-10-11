@@ -5,7 +5,12 @@ class StatesController < ApplicationController
   end
 
   def show
-    @state = State.find_by(code: params[:code])
+    @state = State.find_by(code: params[:code].upcase)
     render json: @state
   end
+
+  # def show
+  #   @state = State.find_by(state: params[:state])
+  #   render json: @state
+
 end
