@@ -4,8 +4,13 @@ class StatesController < ApplicationController
     render json: states.all
   end
 
-  def show
-    @state = State.find_by(code: params["code"].upcase)
+  def show_state
+    @state = State.find_by(state: params["state"].capitalize)
     render json: @state
   end
+
+  # # def show
+  #   @state = State.find_by(code: params["code"].upcase)
+  #   render json: @state
+  # end
 end
