@@ -9,7 +9,7 @@ class StatesController < ApplicationController
     render json: @state
   end
 
-  def index_codes
+  def codes_index
     codes = Code.all
     render json: codes.all
   end
